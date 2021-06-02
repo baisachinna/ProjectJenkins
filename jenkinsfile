@@ -1,0 +1,23 @@
+pipeline {
+    agent { node { label 'MVN' } }
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('PWD') {
+            steps {
+                sh 'pwd'
+            }
+        }
+        stage('LS'){
+            steps {
+                sh 'ls -ltr'
+            }
+        }
+        stage('CD') {
+            steps {
+                sh 'cd /home/jenkins/workspace/Test_Pipeline_Project'
+            }
+        }
+    }
+}
