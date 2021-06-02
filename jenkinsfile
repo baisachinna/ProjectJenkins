@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        node {
-            lable 'MVN'
-        }
-    }
+    agent { node { lable 'MVN' } }
     options {
         skipStagesAfterUnstable()
     }
@@ -19,4 +15,4 @@ pipeline {
             }
         }
     }
-    }
+}
