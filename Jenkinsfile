@@ -10,6 +10,7 @@ pipeline {
     stages{
         stage('Build'){
             steps{
+                sh 'cd /home/jenkins/workspace/CI_CD_Pipeline/Pipeline1_Poll_Build_UnitTest_Feature1_Branch/payslip/'
                 sh 'mvn verify'
             }
         }
