@@ -1,23 +1,22 @@
 pipeline {
-    agent { node { label 'MVN' } }
+    agent {
+        node {
+            lable 'MVN'
+        }
+    }
     options {
         skipStagesAfterUnstable()
     }
-    stages {
-        stage('PWD') {
-            steps {
-                sh 'pwd'
+    stages{
+        stage('Build'){
+            steps{
+                sh 'mvn verify'
             }
         }
-        stage('LS'){
-            steps {
-                sh 'ls -ltr'
-            }
-        }
-        stage('CD') {
-            steps {
-                sh 'cd /home/jenkins/workspace/Test_Pipeline_Project'
+        stage('JUnit Test'){
+            steps{
+                junit 'payslip/target/surefire-reports/*.xml'
             }
         }
     }
-}
+    }
