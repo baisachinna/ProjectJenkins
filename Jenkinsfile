@@ -1,6 +1,6 @@
 def AGENT_LABEL = null
 
-node(''){
+node('built-in'){
 	stage('set agent'){
 		if (env.JOB_NAME == scmcheckjob1 ){
 			AGENT_LABEL = 'any'
