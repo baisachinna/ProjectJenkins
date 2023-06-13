@@ -1,6 +1,9 @@
 pipeline{
 	agent {
 		def AGENT_LABEL = null
+		if (${AGENT_LABEL} == null){
+			label any
+		}
 		
 	}
 
