@@ -2,7 +2,7 @@ def AGENT_LABEL = null
 
 node('built-in'){
 	stage('set agent'){
-		if (env.JOB_NAME == scmcheckjob1 ){
+		if (env.JOB_NAME == 'scmcheckjob1' ){
 			AGENT_LABEL = 'any'
 		} 
 		else {
