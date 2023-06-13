@@ -15,7 +15,7 @@ node('built-in'){
 
 
 pipeline{
-	agent { label $AGENT_LABEL }
+	agent { label AGENT_LABEL }
 stages{
 stage('welcome 1st stage') {
 	steps{
