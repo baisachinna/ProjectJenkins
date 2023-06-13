@@ -1,5 +1,8 @@
 pipeline{
-agent any
+	agent {
+		def AGENT_LABEL = null
+		
+	}
 
 stages{
 stage('welcome 1st stage') {
