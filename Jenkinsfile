@@ -8,13 +8,14 @@ node('master'){
 		else {
 			println("master")
 			AGENT_LABEL = 'any'
+			println AGENT_LABEL
 		}
 	}
 }
 
 
 pipeline{
-	agent AGENT_LABEL
+	agent $AGENT_LABEL
 stages{
 stage('welcome 1st stage') {
 	steps{
