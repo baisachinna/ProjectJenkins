@@ -1,10 +1,7 @@
 def AGENT_LABEL = null
 
 pipeline{
-	agent {
-		label any
-	}
-
+	agent any
 stages{
 stage('welcome 1st stage') {
 	steps{
