@@ -2,10 +2,7 @@ def AGENT_LABEL = null
 
 pipeline{
 	agent {
-		if (${AGENT_LABEL} == null){
-			label any
-		}
-		
+		label any
 	}
 
 stages{
